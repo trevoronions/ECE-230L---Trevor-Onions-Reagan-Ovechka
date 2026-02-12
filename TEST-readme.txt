@@ -1,3 +1,4 @@
+Naive:
 Y = (~A & ~B & ~C & D) | (~A & ~B & C & ~D) |
 (~A & ~B & C & D) | (~A & B & ~C & ~D) |
 (~A & B & C & ~D) | (A & ~B & C & ~D) |
