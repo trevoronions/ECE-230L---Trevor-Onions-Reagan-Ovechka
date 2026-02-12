@@ -15,7 +15,6 @@ using an implemented design on your Basys3 boards.
 
 ## Lab Summary
 
-Summarize your learnings from the lab here.
 
 ## Lab Questions
 
@@ -24,4 +23,4 @@ The reason we are able to group these 1's or 0's across edges is because the edg
 ### Why are the names Sum of Products and Products of Sums?
 First the reason that the name is sum of products is because you are using one OR gate (represented by +) and multiple AND gates (represented by *), so you are summing the products.
 ### Open the test.v file – how are we able to check that the signals match using XOR?
-
+We are able to check using the XOR because each of the LEDs refer to either the naive, maxterm, or minterm commands, so if we check to see with a xor command if one is lighting up and the other isn't we know that there is a error in the code. 
