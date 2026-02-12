@@ -14,7 +14,7 @@ using an implemented design on your Basys3 boards.
 | Question 3 | Your answers to the question | 25% |
 
 ## Lab Summary
-
+In this lab, we learned how to optimize a circuit using logic equations by using a truth table and a K-map. We first had to read the truth table and make the K-Map, grouping both the min terms and the max terms. Then, we wrote the equations for both the min terms and the max terms. At this point we were ready to write our files. Using the truth table and our equations, we wrote the naive.v, the maxterm.v and the minterm.v files by writing the equations. This showed us the application of SOP and POS onto the board. Overall, we learned a more practical application of these logic equations and how to apply them onto a board.
 
 ## Lab Questions
 
