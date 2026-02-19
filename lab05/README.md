@@ -17,7 +17,7 @@ the constraints file maps your inputs and outputs to real pins on the FPGA.
 Reagan Ovechka, Trevor Onions
 
 ## Lab Summary
-In this lab, we dove deeper into using verilog to implement digital logic. This lab was different because we had to design the top.v file and build each of the circuits. We were able to build a more complex circuit by using the output of one circuit as an input to the other. In this lab we learned how to build these more complex circuits within verilog, applying what we learned in class to build this circuit based on the truth table.
+In this lab, we dove deeper into using verilog to implement digital logic. This lab was different because we had to design the top.v file, the constraints.xdc file, and build the module and each of the circuits. We were able to build a more complex circuit by using the output of one circuit as an input to the other. In this lab we learned how to build these more complex circuits within verilog, applying what we learned in class to build this circuit based on the truth table.
 
 ## Lab Questions
 
