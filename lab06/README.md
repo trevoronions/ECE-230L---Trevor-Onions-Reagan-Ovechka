@@ -11,6 +11,11 @@ In this lab you've learned the basics of number theory as it relates to addition
 | Question 2 | Your answers to the question | 25% |
 | Question 3 | Your answers to the question | 25% |
 
+## Names
+Reagan Ovechka, Trevor Onions
+
+## Lab Summary
+
 ## Lab Questions
 
 ### 1 - How might you add more than two bits together?
