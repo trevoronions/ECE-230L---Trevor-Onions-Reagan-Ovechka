@@ -16,7 +16,7 @@ Reagan Ovechka, Trevor Onions
 
 ## Lab Summary
 
-In this lab, we applied our knowledge of adding and number theory to implement a two bit adder in vivado.
+In this lab, we applied our knowledge of adding and number theory to implement a two bit adder in vivado. We made an object of a full adder and utilized it in series to create a two bit adder. 
 
 ## Lab Questions
 
