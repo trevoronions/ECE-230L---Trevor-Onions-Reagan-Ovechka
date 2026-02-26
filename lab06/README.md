@@ -16,6 +16,8 @@ Reagan Ovechka, Trevor Onions
 
 ## Lab Summary
 
+In this lab, we applied our knowledge of adding and number theory to control a light from two switches, in other words, an XOR light switch equation. 
+
 ## Lab Questions
 
 ### 1 - How might you add more than two bits together?
