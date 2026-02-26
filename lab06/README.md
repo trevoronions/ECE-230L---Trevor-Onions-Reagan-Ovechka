@@ -16,7 +16,7 @@ Reagan Ovechka, Trevor Onions
 
 ## Lab Summary
 
-In this lab, we applied our knowledge of adding and number theory to control a light from two switches, in other words, an XOR light switch equation. 
+In this lab, we applied our knowledge of adding and number theory to implement a two bit adder in vivado.
 
 ## Lab Questions
 
@@ -25,4 +25,6 @@ In this lab, we applied our knowledge of adding and number theory to control a l
 ### 2 - What is the importance of the XOR gate in an adder?
 
 ### 3 - What is the largest number a two bit adder can handle? What happens when you go over?
+
+The largest possible output a two bit adder can handle is 7. This is because the largest number two bits can be is 3, 3+3=6. However, we also have a carry in for the two bit adder, meaning it is actually 3+3+1=7. Therefore, the largest possible number it can handle is 7. If it goes over this number, it is an overflow and the computer is unable to store that data.
 
