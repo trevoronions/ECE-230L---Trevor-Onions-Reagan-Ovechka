@@ -22,6 +22,8 @@ In this lab, we applied our knowledge of adding and number theory to implement a
 
 ### 1 - How might you add more than two bits together?
 
+To add more than 2 bits together, you would need to use a ripple adder, which is multiple full adders chained together.
+
 ### 2 - What is the importance of the XOR gate in an adder?
 
 The importance of an XOR gate in an adder is it maintains the rule of adding binary numbers where 1+1=0 with a carry, and only producing 1 when the inputs are unequal, for example 1+0=1, or 0+1=1.
