@@ -12,6 +12,7 @@ In this lab you have learned about multiplexers and demultiplexers.
 | Question 3 | Your answers to the question | 25% |
 
 ## Names
+Reagan Ovechka, Trevor Onions
 
 ## Summary
 
