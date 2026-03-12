@@ -15,7 +15,7 @@ In this lab you have learned about multiplexers and demultiplexers.
 Reagan Ovechka, Trevor Onions
 
 ## Summary
-In this lab we learned about implementing multiplexers and demutiplexers in Verilog.
+In this lab we learned about implementing multiplexers and demutiplexers in Verilog. We had to build a 4 bit multiplexer and a 4 bit demultiplexer to demonstrate how mulitplexers take mulitiple inputs and output a single data stream based on the select input, then we took that data output and demonstrated how demultiplexers take a data stream and have multiple outputs based on the select input. We learned how the MUX and DEMUX can be applied in this example and gained a better understanding of how these are built and implemented
 
 ## Lab Questions
 
@@ -26,5 +26,5 @@ Mulitplexers allow the combination of multiple inputs into a single data stream,
 Takes a single data stream and can produce mutliple ouputs based on the select line.
 
 ### What other uses might these circuits have? (Think Shannon’s)
-Mulitplexers can be used to implement a boolean 
+Multiplexers can be used to implement a boolean function with Shannon's expanion and break it down into smaller components. The demultiplexer can undo Shannon's expansion and expand the boolean function.
 
