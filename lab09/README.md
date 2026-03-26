@@ -12,7 +12,7 @@ In this lab, you learned about the basic building block of sequential circuits: 
 | Question 3 | Your answers to the question | 25% |
 
 ## Names
-
+Reagan Ovechka, Trevor Onions
 ## Summary
 
 ## Lab Questions
@@ -20,5 +20,6 @@ In this lab, you learned about the basic building block of sequential circuits: 
 ###  Why can we not just use structural Verilog to implement latches?
 
 ### What is the meaning of always @(*) in a sensitivity block?
-
+Means that they contain regular continuous assignment wherin no memory is needed.
 ### What importance is memory to digital circuits?
+It enables storage and accessability of binary data.
