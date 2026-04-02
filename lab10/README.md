@@ -12,6 +12,7 @@ In this lab, you’ve learned about edge sensitive circuits and explored some of
 |Question 3|Your answers to the question|25%|
 
 ## Names
+Reagan Ovechka, Trevor Onions
 
 ## Summary
 
