@@ -23,7 +23,7 @@ In this lab, we applied what we learned about One Hot and Binary state machines 
 One Hot encoding makes current state logic decisions much easier, but it requires more DFFs as the complexity grows. Binary encoding often has invalid representations, such as no state D but the two DFFs can represent the state 11. 
 
 ### Which method did your team find easier, and why?
-
+We found the One Hot easier, we could find the equations based just on the state table and there was no need to derive a K-Map. It was more straight forward.
 
 ### In what conditions would you have to use one over the other? Think about resource utilization on the FPGA.
 One Hot would be preffered when targeting FPGSs, aiming for higher clock speeds, or needing fast, simple, and independant combinatorial logic. Binary would be preffered if an FSM has hundreds of states because a One Hot uses more DFFs than Binary, making wasteful hardware. 
