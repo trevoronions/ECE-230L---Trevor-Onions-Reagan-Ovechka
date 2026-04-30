@@ -10,14 +10,14 @@ module top
 
 /******** DO NOT MODIFY ********/
 wire clk_1Hz;       //Generate Internal 1Hz Clock
-wire btnC_1Hz;     //Stretch load signal
+wire btnC_1Hz;     
 
 //If running simulation, output clock frequency is 100MHz, else 1Hz
 `ifndef SYNTHESIS
     assign clk_1Hz = clk;
 `else
     clk_div #(.INPUT_FREQ(100_000_000), .OUTPUT_FREQ(1)) clk_div_1Hz 
-    (.iclk(clk) , .rst(btnC) , .oclk(clk_1Hz));
+    (.iclk(clk) , .rst(1'b0) , .oclk(clk_1Hz));
 `endif
 
 // Check stopwatch/timer frequency
