@@ -26,12 +26,12 @@ assign d4 = state[4] ^ (~state[3] && ~state[2] && ~state[1] && ~state[0]);
 assign d5 = state[5] ^ (~state[4] && ~state[3] && ~state[2] && ~state[1] && ~state[0]);
 
 // Select between load/value, decrement, or hold depending on control signals.
-assign data0 = load ? load_value[0] : ((en && ~at_zero) ? d0 : state[0]);
-assign data1 = load ? load_value[1] : ((en && ~at_zero) ? d1 : state[1]);
-assign data2 = load ? load_value[2] : ((en && ~at_zero) ? d2 : state[2]);
-assign data3 = load ? load_value[3] : ((en && ~at_zero) ? d3 : state[3]);
-assign data4 = load ? load_value[4] : ((en && ~at_zero) ? d4 : state[4]);
-assign data5 = load ? load_value[5] : ((en && ~at_zero) ? d5 : state[5]);
+assign data0 = rst ? 1'b0 : load ? load_value[0] : ((en && ~at_zero) ? d0 : state[0]);
+assign data1 = rst ? 1'b0 : load ? load_value[1] : ((en && ~at_zero) ? d1 : state[1]);
+assign data2 = rst ? 1'b0 : load ? load_value[2] : ((en && ~at_zero) ? d2 : state[2]);
+assign data3 = rst ? 1'b0 : load ? load_value[3] : ((en && ~at_zero) ? d3 : state[3]);
+assign data4 = rst ? 1'b0 : load ? load_value[4] : ((en && ~at_zero) ? d4 : state[4]);
+assign data5 = rst ? 1'b0 : load ? load_value[5] : ((en && ~at_zero) ? d5 : state[5]);
 
 // Each bit is stored in a D flip-flop. On each clock edge, the selected data value
 // is loaded into the corresponding state bit. Reset clears all bits to 0.
