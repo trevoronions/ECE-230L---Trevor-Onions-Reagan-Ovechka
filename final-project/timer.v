@@ -1,4 +1,5 @@
-//Timer: Mod-60 downcounter with synchronous load
+// Timer: synchronous modulo-60 down counter with optional parallel load.
+// The counter decrements on each clock when enabled and stops at zero.
 module timer(
     input clk,
     input rst,
@@ -7,18 +8,24 @@ module timer(
     input [5:0] load_value, //Value to load into counter register. Counter will then start counting from this value
     output [5:0] state     //6-bits to represent the highest number 59
 );
-wire d0, d1, d2, d3, d4, d5;
-wire data0, data1, data2, data3, data4, data5;
-wire at_zero;
 
+wire d0, d1, d2, d3, d4, d5;                // next-state bits for the down-counter logic
+wire data0, data1, data2, data3, data4, data5; // actual inputs to the D flip-flops
+wire at_zero;                               // indicates the counter has reached 0
+
+// Comparator: assert at_zero when the entire counter is zero.
 assign at_zero = (state == 6'b0);
-assign d0 = (~state[0]);
+
+// Compute the next bit values for a binary down-count.
+// These signals implement the borrow chain for decrementing state by one.
+assign d0 = ~state[0];
 assign d1 = state[1] ^ (~state[0]);
 assign d2 = state[2] ^ (~state[1] && ~state[0]);
 assign d3 = state[3] ^ (~state[2] && ~state[1] && ~state[0]);
 assign d4 = state[4] ^ (~state[3] && ~state[2] && ~state[1] && ~state[0]);
 assign d5 = state[5] ^ (~state[4] && ~state[3] && ~state[2] && ~state[1] && ~state[0]);
 
+// Select between load/value, decrement, or hold depending on control signals.
 assign data0 = load ? load_value[0] : ((en && ~at_zero) ? d0 : state[0]);
 assign data1 = load ? load_value[1] : ((en && ~at_zero) ? d1 : state[1]);
 assign data2 = load ? load_value[2] : ((en && ~at_zero) ? d2 : state[2]);
@@ -26,6 +33,8 @@ assign data3 = load ? load_value[3] : ((en && ~at_zero) ? d3 : state[3]);
 assign data4 = load ? load_value[4] : ((en && ~at_zero) ? d4 : state[4]);
 assign data5 = load ? load_value[5] : ((en && ~at_zero) ? d5 : state[5]);
 
+// Each bit is stored in a D flip-flop. On each clock edge, the selected data value
+// is loaded into the corresponding state bit. Reset clears all bits to 0.
     dff dff0(
         .data(data0),
         .rst(rst),
